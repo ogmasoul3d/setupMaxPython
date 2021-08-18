@@ -1,3 +1,12 @@
+Function Test-CommandExists {
+    Param ($command)
+    $oldPreference = $ErrorActionPreference
+    $ErrorActionPreference = ‘stop’
+    try {if(Get-Command $command){RETURN $true}}
+    Catch {Write-Host “$command does not exist”; RETURN $false}
+    Finally {$ErrorActionPreference=$oldPreference}
+} #end function test-CommandExists
+
 #3dsmax 2022 == 24.0
 #3dsmax 2021 == 23.0
 #3dsmax 2020 == 22.0
@@ -13,9 +22,16 @@ Write-Host ("you max is installed here: " + $InstallPath.Installdir)
 
 $PythonFolder = $InstallPath.Installdir[0] + $3dsmaxPythonVersion
 
+
 "Test if folder [$PythonFolder] exists"
 if (Test-Path -Path $PythonFolder) {
     "Path exists!"
+    $cmd = $PythonFolder+"\python.exe"
+    $cmd = "pip -V"
+    Write-Host $cmd
+    Test-CommandExists $cmd
+
+    
 } else {
     "Path doesn't exist."
 }
