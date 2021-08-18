@@ -65,7 +65,7 @@ function New-TemporaryDirectory {
     #3dsmax 2019 == 21.0
 #> 
 
-$maxVersion = 23
+$maxVersion = 24
 
 #this is the correct python folder for max 2021 and 2022
 $3dsmaxPythonVersion = "Python37"
@@ -75,7 +75,11 @@ $InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersio
 
 
 #!!!! this can sometimes return an array or somtimes just a string.. WATCH out.. this can bite you.
-$3dsMaxLocation = $InstallPath.Installdir[0]
+if ($InstallPath.Installdir -is [array]){
+    $3dsMaxLocation = $InstallPath.Installdir[0]
+} else {
+    $3dsMaxLocation = $InstallPath.Installdir
+}
 
 ##check so python folder is not null..
 if ($3dsMaxLocation) { 
