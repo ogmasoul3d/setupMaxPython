@@ -125,6 +125,10 @@ if ($3dsMaxLocation) {
             $pyargs = @("-m", "pip", "install", "--upgrade", "pip")
             & $pythonExe $pyargs
 
+            Write-Host " [*] Now installing VirtualEnv package..." -ForegroundColor Green
+            $pyargs = @("-m", "pip" ,"install" ,"virtualenv", '--user')
+            & $pythonExe $pyargs
+
         } else {
             Write-Host " [*] pip is NOT installed" -ForegroundColor Yellow
             
