@@ -60,4 +60,4 @@ This script should:
 3. start 3dsMax from this terminal with venv activated
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
-### **[my page with other learnings and findings in this Python & Max endevour](https://github.com/ogmasoul3d/setupMaxPython/tree/main/MaxPythonTipsnTricks)**
+### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
