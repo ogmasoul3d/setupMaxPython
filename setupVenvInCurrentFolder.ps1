@@ -51,7 +51,7 @@ if ($3dsMaxLocation) {
         $pythonExe = Join-Path $PythonFolder "python.exe"
 
         Write-Host " [*] Setting up virtualenv in /venv folder.." -ForegroundColor Green
-        $pyargs = @("-m", "venv" ,"venv")
+        $pyargs = @("-m", "virtualenv" ,"venv")
         & $pythonExe $pyargs
     }
 } else {
