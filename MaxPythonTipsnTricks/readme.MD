@@ -16,6 +16,7 @@ python -m pip install -e .
 import importlib
 importlib.reload('theNameOfTheModuleThatShouldReload')
 
-# when developing I add this to the top of the script so it easier gets the updates from the package I am developing
+# when developing I add this to the top of the script
+# so it easier gets the updates from the package I am developing
 ```
 
