@@ -13,7 +13,11 @@ write-host (Get-Item $Script:MyInvocation.MyCommand.Path ).DirectoryName
     #3dsmax 2019 == 21.0
 #> 
 
+#update this row to the max version you are targeting
 $maxName = 2022
+
+#this is the correct python folder for max 2021 and 2022
+$3dsmaxPythonVersion = "Python37"
 
 # the ID used in regedit is based in name of max - the year 1998
 $maxVersion = $maxName - 1998
@@ -21,8 +25,6 @@ $maxVersion = $maxName - 1998
 #this gets the max install path on your machine
 $InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersion*\
 
-#this is the correct python folder for max 2021 and 2022
-$3dsmaxPythonVersion = "Python37"
 
 
 

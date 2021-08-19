@@ -9,6 +9,7 @@
     #3dsmax 2019 == 21.0
 #> 
 
+#update this row to the max version you are targeting
 $maxName = 2022
 
 # the ID used in regedit is based in name of max - the year 1998

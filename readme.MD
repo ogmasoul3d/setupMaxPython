@@ -1,8 +1,60 @@
-Some small script to simplify the setup of python in 3dsmax the current ones that install and setup tools like PIP for the version of python inside 3dsmax.
+# **Some small scripts to simplify the setup and usage of python in 3dsmax development**
 
-This does not use gitbash SH scripting. Instead I use Powershell since this is more available on the renderfarm.
+ **Note.** *This does not use gitbash/bash SH scripting. Instead I use Powershell, since this is more available on the renderfarm.*
+
+--------
+
+##  **InstallPipAndVirtualenv.ps1**
+
+**Usage:**
+*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max*
+
+```
+#update this row to the max version you are targeting
+$maxName = 2022
+
+#this is the correct python folder for max 2021 and 2022
+$3dsmaxPythonVersion = "Python37"
+```
+
 
 This script should:
 1. find the install location of your 3dsmax..
-2. using the python version inside 3dsmax install the correct pip version and virtualEnv
+2. *using the python version inside 3dsmax*, install the correct pip version and virtualEnv
 3. it also updates pip if you already have it installed
+
+--------
+##  **setupVenvInCurrentFolder.ps1**
+
+**Usage:**
+*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max*
+
+```
+#update this row to the max version you are targeting
+$maxName = 2022
+
+#this is the correct python folder for max 2021 and 2022
+$3dsmaxPythonVersion = "Python37"
+```
+
+
+This script should:
+1. using the PIP and python inside 3dsmax, installed with "InstallPipAndVirtualenv.ps1"
+2.  setup up a Venv directory inside the folder where this script is run.
+
+--------
+##  **startMaxLocal.ps1**
+
+**Usage:**
+*This is a small helper script that activates venv before starting 3dsmax, this makes the same virtual-environment available to 3dsmax. Which simplifies development*
+
+```
+#update this row to the max version you are targeting
+$maxName = 2022
+```
+
+This script should:
+1. find venv folder in the folder this is run from
+2. activate the venv
+3. start 3dsMax from this terminal with venv activated
+4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
