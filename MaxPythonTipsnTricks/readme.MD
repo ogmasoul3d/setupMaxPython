@@ -5,6 +5,7 @@
 3. add the *-e* option to make the package *editable* 
 
 ```powershell
+
 python -m pip install -e .
 ```
 ---------
@@ -75,7 +76,7 @@ Or if your repository is private:
 git+https://{token}@gitprovider.com/user/project.git@{version}
 ```
 
-Where *version* can be a tag, a branch, or a commit. And *token* is a personal access token ***with read only permissions*** from your provider.
+Where `version` can be a tag, a branch, or a commit. And `token` is a personal access token ***with read only permissions*** from your provider.
 
 To install the package, you need to add the URI in your requirements file. Pip will automatically expand environment variables in your URI, so you don’t have to hard code the token in the URI. See using environment variables in Read the Docs for more information.
 
