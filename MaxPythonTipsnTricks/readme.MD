@@ -1,4 +1,4 @@
-## [<< Back](../readme.md)
+## [<< Back](https://github.com/ogmasoul3d/setupMaxPython)
 
 ## **important thing**
 
