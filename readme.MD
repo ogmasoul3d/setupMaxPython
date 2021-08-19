@@ -28,7 +28,7 @@ This script should:
 ##  **setupVenvInCurrentFolder.ps1**
 
 **Usage:**
-*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max*
+*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max<br><br>This script is run every time I want to setup a new venv for a new project I am working on. I usually copy this script to that folder and let it setup the virtual-environment.*
 
 ```
 #update this row to the max version you are targeting
