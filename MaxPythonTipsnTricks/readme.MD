@@ -1,6 +1,6 @@
 ## [<< Back](https://github.com/ogmasoul3d/setupMaxPython)
 
-## **important thing**
+## **important thing about virtualenv and NOT using just venv**
 
 <div style="padding-left: 10px;">
 
