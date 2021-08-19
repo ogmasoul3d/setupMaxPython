@@ -9,10 +9,10 @@
     #3dsmax 2019 == 21.0
 #> 
 
-$maxVersion = 25
+$maxVersion = 2022
 
 #this gets the max install path on your machine
-$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersion*\
+$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*"$($maxVersion - 1998)"*\
 
 #!!!! this can sometimes return an array or somtimes just a string.. WATCH out.. this can bite you.
 if ($InstallPath.Installdir -is [array]){
@@ -21,6 +21,7 @@ if ($InstallPath.Installdir -is [array]){
     $3dsMaxLocation = $InstallPath.Installdir
 }
 
+$3dsMaxLocation
 if ($3dsMaxLocation){
     if (Test-Path -Path "./venv") {
         write-host " [*] found venv installation in this folder"  -ForegroundColor Green
@@ -30,6 +31,8 @@ if ($3dsMaxLocation){
         Write-Host " [*] start max with this virtualEnv active"  -ForegroundColor Green
         write-Host " max location: $3dsMaxLocation\3dsmax.exe" -ForegroundColor Yellow
         & "$3dsMaxLocation\3dsmax.exe" /run 
+    } else {
+        Write-Host "you have not setup a Venv here.. do this before running this script" -ForegroundColor Red
     }
 } else {
     Write-Host "Could not find any max installed.. have you setup the correct maxversion to search for.. It can be changed in the top of this script" -ForegroundColor Red
