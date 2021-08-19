@@ -10,7 +10,7 @@
 #> 
 
 #update this row to the max version you are targeting
-$maxName = 2022
+$maxName = 2021
 
 # the ID used in regedit is based in name of max - the year 1998
 $maxVersion = $maxName - 1998
