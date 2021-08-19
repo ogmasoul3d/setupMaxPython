@@ -11,7 +11,8 @@ python -m virtual venv
 IF you just do `python -m venv venv`, then it **DOES NOT WORK** with 3dsmax. Venv is a subset to virtualenv and for this to function you need some more complex operations included in virtualenv.
     
 ```
-#if you just want to see which virtualenv you have active and where it is pointing to
+# if you just want to see which virtualenv you have active 
+# and where it is pointing to, run this cmd in powershell
 get-command python | fl *
 ```
 
