@@ -9,6 +9,12 @@ For 3dsmax to really function you need to create a `virtual-environment` using
 python -m virtual venv
 ```
 IF you just do `python -m venv venv`, then it **DOES NOT WORK** with 3dsmax. Venv is a subset to virtualenv and for this to function you need some more complex operations included in virtualenv.
+    
+```
+#if you just want to see which virtualenv you have active and where it is pointing to
+get-command python | fl *
+```
+
 </div>
 
 ## **When installing a local package**
