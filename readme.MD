@@ -8,7 +8,7 @@
 
 **Usage:**
 *You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max. <br><br>
-This is done on a freshly installed 3dsmax. You do not need to run this when it is installed only if you want to update pip after the initial installation*
+This is done on a freshly installed 3dsmax. **You do not need to run this again after it is installed**, only if you want to update pip after the initial installation*
 
 ```
 #update this row to the max version you are targeting
@@ -28,7 +28,7 @@ This script should:
 ##  **setupVenvInCurrentFolder.ps1**
 
 **Usage:**
-*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max<br><br>This script is run every time I want to setup a new venv for a new project I am working on. I usually copy this script to that folder and let it setup the virtual-environment.*
+*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max<br><br>**This script is run every time I want to setup a new venv for a new project** I am working on. I usually copy this script to that folder and let it setup the virtual-environment.*
 
 ```
 #update this row to the max version you are targeting
@@ -47,7 +47,7 @@ This script should:
 ##  **startMaxLocal.ps1**
 
 **Usage:**
-*This is a small helper script that activates venv before starting 3dsmax, this makes the same virtual-environment available to 3dsmax. Which simplifies development*
+*This is a small helper script that activates venv before starting 3dsmax, this makes the same virtual-environment available to 3dsmax. Which simplifies development<br><br>This script is run **every time** I start 3dsmax, that is using this specific Venv*
 
 ```
 #update this row to the max version you are targeting
