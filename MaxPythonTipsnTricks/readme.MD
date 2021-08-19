@@ -35,6 +35,50 @@ An advantage of this is that you can also install to particular branches, tags, 
 ```
 pip install git+https://github.com/jladan/package_demo.git@v0.1#egg=measurements
 ```
+
+there seems to be an issue with dependency-links.. if you have a package that are dependant on other packages also hosted on github..
+
+using the **install_requires** in your setup instead is "more correct"
+https://stackoverflow.com/a/54216163
+
+```
+setup(
+    name='yourpackage',
+    version='1.7.5',
+    packages=[],
+    url='',
+    license='',
+    author='',
+    author_email='',
+    description='',
+    install_requires=[
+        'somepackage==1.2.0',
+        'repo @ https://github.com/user/archive/master.zip#egg=repo-1.0.0',
+        'anotherpackage==4.2.1'
+    ],
+)
+```
+
+
+
+**From a Git repository, [better docs for this:](
+https://docs.readthedocs.io/en/stable/guides/private-python-packages.html)**
+
+Pip supports installing packages from a Git repository using the URI form:
+
+```
+git+https://gitprovider.com/user/project.git@{version
+```
+
+Or if your repository is private:
+```
+git+https://{token}@gitprovider.com/user/project.git@{version}
+```
+
+Where *version* can be a tag, a branch, or a commit. And *token* is a personal access token ***with read only permissions*** from your provider.
+
+To install the package, you need to add the URI in your requirements file. Pip will automatically expand environment variables in your URI, so you don’t have to hard code the token in the URI. See using environment variables in Read the Docs for more information.
+
 ---------
 
 ## **Nice tutorial about python packing**
