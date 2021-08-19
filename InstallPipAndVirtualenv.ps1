@@ -65,13 +65,17 @@ function New-TemporaryDirectory {
     #3dsmax 2019 == 21.0
 #> 
 
-$maxVersion = 24
+$maxName = 2022
+
+# the ID used in regedit is based in name of max - the year 1998
+$maxVersion = $maxName - 1998
+
+#this gets the max install path on your machine
+$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersion*\
 
 #this is the correct python folder for max 2021 and 2022
 $3dsmaxPythonVersion = "Python37"
 
-#this gets the max install path on your machine
-$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersion*\
 
 
 #!!!! this can sometimes return an array or somtimes just a string.. WATCH out.. this can bite you.

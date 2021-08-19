@@ -9,10 +9,13 @@
     #3dsmax 2019 == 21.0
 #> 
 
-$maxVersion = 2022
+$maxName = 2022
+
+# the ID used in regedit is based in name of max - the year 1998
+$maxVersion = $maxName - 1998
 
 #this gets the max install path on your machine
-$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*"$($maxVersion - 1998)"*\
+$InstallPath = Get-ItemProperty -Path HKLM:\SOFTWARE\Autodesk\3dsMax\*$maxVersion*\
 
 #!!!! this can sometimes return an array or somtimes just a string.. WATCH out.. this can bite you.
 if ($InstallPath.Installdir -is [array]){
