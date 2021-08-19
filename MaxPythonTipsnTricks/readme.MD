@@ -6,7 +6,7 @@
 
 For 3dsmax to really function you need to create a `virtual-environment` using
 ```
-python -m virtual venv
+python -m virtualenv venv
 ```
 IF you just do `python -m venv venv`, then it **DOES NOT WORK** with 3dsmax. Venv is a subset to virtualenv and for this to function you need some more complex operations included in virtualenv.
     
