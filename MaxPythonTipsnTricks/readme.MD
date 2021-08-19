@@ -23,6 +23,7 @@ IF you just do `python -m venv venv`, then it **DOES NOT WORK** with 3dsmax. Ven
 python -m pip install -e .
 ```
 ---------
+    
 </div>
 
 ## **In 3dsmax do this to update the module/library/package**
@@ -39,6 +40,7 @@ importlib.reload('theNameOfTheModuleThatShouldReload')
 # so it easier gets the updates from the package I am developing
 ```
 </div>
+
 ---------
 
 ## **pip installing packages from github, instead of pypi**
@@ -102,6 +104,7 @@ Where `version` can be a tag, a branch, or a commit. And `token` is a personal a
 To install the package, you need to add the URI in your requirements file. Pip will automatically expand environment variables in your URI, so you don’t have to hard code the token in the URI. See using environment variables in Read the Docs for more information.
 
 ---------
+    
 </div>
 
 ## **Nice tutorial about python packing**
