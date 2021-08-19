@@ -7,7 +7,8 @@
 ##  **InstallPipAndVirtualenv.ps1**
 
 **Usage:**
-*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max*
+*You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max. <br><br>
+This is done on a freshly installed 3dsmax. You do not need to run this when it is installed only if you want to update pip after the initial installation*
 
 ```
 #update this row to the max version you are targeting
