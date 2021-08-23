@@ -25,6 +25,8 @@ if ($InstallPath.Installdir -is [array]){
     $3dsMaxLocation = $InstallPath.Installdir
 }
 
+## this is a personal version that first checks if I can access a machine at work.. before starting 3dsmax..
+## since the max license needs access to work.. it is pointless to start max.. before I have started my VPN..
 
 if (Test-Connection -TargetName comseelm-nt9100.ikea.com -Quiet) {
     if ($3dsMaxLocation){
