@@ -2,6 +2,11 @@
 
  **Note.** *This does not use gitbash/bash SH scripting. Instead I use Powershell, since this is more available on the renderfarm.*
 
+Here are my small powershell scripts to setup:
+* inital install of pip and virtualenv on a freshly installed max.. (**run once** on newly installed max)
+* a small script that setups Venv inside the Project folder you want to work with.. (**run every time you create a new project**)	
+* and a handly/lazy script that activates the Venv BEFORE starting 3dsmax.. to make sure it is active.. All the packages you install in your virtual-env is available in max.. **This is run, everytime I start 3dsmax**
+
 --------
 
 ##  **InstallPipAndVirtualenv.ps1**
