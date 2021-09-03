@@ -53,7 +53,15 @@ if ($3dsMaxLocation) {
         Write-Host " [*] Setting up virtualenv in /venv folder.." -ForegroundColor Green
         $pyargs = @("-m", "virtualenv" ,"venv")
         & $pythonExe $pyargs
+        
+        if (Test-Path -Path "requirements.txt"){
+            & ".\venv\Scripts\activate" /run
+            Write-Host " [*] I found a requirement.txt inside the folder you are running this in.. I am installing the deps now.." -ForegroundColor Green
+            $pyargs = @("-m", "pip" ,"install", "-r", "requirements.txt")
+            & $pythonExe $pyargs
+        }
     }
+
 } else {
     "could not find a path to 3dsmax version $maxVersion"
 }
