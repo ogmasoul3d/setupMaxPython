@@ -14,7 +14,7 @@ write-host (Get-Item $Script:MyInvocation.MyCommand.Path ).DirectoryName
 #> 
 
 #update this row to the max version you are targeting
-$maxName = 2022
+$maxName = 2021
 
 #this is the correct python folder for max 2021 and 2022
 $3dsmaxPythonVersion = "Python37"
