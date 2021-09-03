@@ -25,7 +25,7 @@ print(module_exists('pip'))
 "@
 
 $checkPip = New-TemporaryFile
-$checkPipPythonCode | Out-File $checkPip.FullName
+$checkPipPythonCode | Out-File  -Encoding "UTF8" $checkPip.FullName
 
 
 function Test-CommandExists
