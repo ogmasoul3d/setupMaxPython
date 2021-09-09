@@ -8,6 +8,13 @@ Here are my small powershell scripts to setup:
 * and a handly/lazy script that activates the Venv BEFORE starting 3dsmax.. to make sure it is active.. All the packages you install in your virtual-env is available in max.. **This is run, everytime I start 3dsmax**
 
 --------
+## **Before running any scripts, UPDATE the maxversion.txt file to the version you are targeting. All scripts will read this file to get the version num** 
+
+Just type the version id directly in the txt file.. nothing else.. ex:
+´´´
+2022
+´´´
+
 
 ##  **InstallPipAndVirtualenv.ps1**
 
@@ -16,9 +23,6 @@ Here are my small powershell scripts to setup:
 This is done on a freshly installed 3dsmax. **You do not need to run this again after it is installed**, only if you want to update pip after the initial installation*
 
 ```
-#update this row to the max version you are targeting
-$maxName = 2022
-
 #this is the correct python folder for max 2021 and 2022
 $3dsmaxPythonVersion = "Python37"
 ```
@@ -36,9 +40,6 @@ This script should:
 *You need to update the **$maxName** variable to the version of max you are using and you need to update the **$3dsmaxPythonVersion** if that has changed. You see the name of the folder for python, inside the program folder for max<br><br>**This script is run every time I want to setup a new venv for a new project** I am working on. I usually copy this script to that folder and let it setup the virtual-environment.*
 
 ```
-#update this row to the max version you are targeting
-$maxName = 2022
-
 #this is the correct python folder for max 2021 and 2022
 $3dsmaxPythonVersion = "Python37"
 ```
@@ -54,10 +55,7 @@ This script should:
 **Usage:**
 *This is a small helper script that activates venv before starting 3dsmax, this makes the same virtual-environment available to 3dsmax. Which simplifies development<br><br>This script is run **every time** I start 3dsmax, that is using this specific Venv*
 
-```
-#update this row to the max version you are targeting
-$maxName = 2022
-```
+
 
 This script should:
 1. find venv folder in the folder this is run from
