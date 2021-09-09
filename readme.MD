@@ -8,7 +8,7 @@ Here are my small powershell scripts to setup:
 * and a handly/lazy script that activates the Venv BEFORE starting 3dsmax.. to make sure it is active.. All the packages you install in your virtual-env is available in max.. **This is run, everytime I start 3dsmax**
 
 --------
-## **Before running any scripts, UPDATE the maxversion.txt file to the version you are targeting. All scripts will read this file to get the version num** 
+## **[!] Before running any scripts, *UPDATE maxversion.txt* to the version you are targeting. All scripts will read this file to get the version num** 
 
 Just type the version id directly in the txt file.. nothing else.. ex:
 ´´´
