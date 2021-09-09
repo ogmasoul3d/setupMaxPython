@@ -10,7 +10,14 @@
 #> 
 
 #update this row to the max version you are targeting
-$maxName = 2022
+if (Test-Path -Path "$PSScriptRoot\maxversion.txt") {
+    $maxV = Get-Content $PSScriptRoot\maxversion.txt
+    write-host " [*] Found maxversion: $maxV in $PSScriptRoot\maxversion.txt" -ForegroundColor Green
+    $maxName = $maxV
+} else {
+    write-host " [*] could not find the $PSScriptRoot\maxversion.txt" -ForegroundColor Red
+    $maxName = 2021
+}
 
 # the ID used in regedit is based in name of max - the year 1998
 $maxVersion = $maxName - 1998
