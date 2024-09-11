@@ -62,6 +62,11 @@ This is my preferred way of sharing/storing/installing packages. Simply create a
 ```powershell
 pip install git+https://github.com/jladan/package_demo.git#egg=measurements
 ```
+this also works in requirements.txt
+```
+git+https://github.com/ADN-DevTech/3dsMax-Python-HowTos@master#egg=mxthread-autodesk&subdirectory=src/packages/mxthread
+```
+
 An advantage of this is that you can also install to particular branches, tags, and commits. A common practice is add a tag for the version release git tag v0.1. Users of the library can then lock into that particular version,
 ```powershell
 pip install git+https://github.com/jladan/package_demo.git@v0.1#egg=measurements
