@@ -41,7 +41,7 @@ if ($3dsMaxLocation){
 
         Write-Host " [*] start max with this virtualEnv active"  -ForegroundColor Green
         write-Host " max location: $3dsMaxLocation\3dsmax.exe" -ForegroundColor Yellow
-        & "$3dsMaxLocation\3dsmax.exe" /run 
+        & "$3dsMaxLocation\3dsmax.exe" -a .\setupMaxPython\Splash.png /run 
     } else {
         Write-Host "you have not setup a Venv here.. do this before running this script" -ForegroundColor Red
     }

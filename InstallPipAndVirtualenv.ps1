@@ -76,7 +76,7 @@ if (Test-Path -Path "$PSScriptRoot\maxversion.txt") {
 }
 
 #this is the correct python folder for max 2021 and 2022
-$3dsmaxPythonVersion = "Python37"
+$3dsmaxPythonVersion = "Python"
 
 # the ID used in regedit is based in name of max - the year 1998
 $maxVersion = $maxName - 1998
