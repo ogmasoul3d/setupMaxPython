@@ -100,6 +100,9 @@ if ($3dsMaxLocation) {
 
     Write-Output "Shortcut created on the desktop: $shortcutPath"
 
+    Write-Host " [*] Generating 3dsmax splash screen.." -ForegroundColor Green
+    & .\setupMaxPython\GenerateSplashScreen.ps1 -text $linkName
+
 
 } else {
     "could not find a path to 3dsmax version $maxVersion"
