@@ -91,7 +91,7 @@ if ($3dsMaxLocation) {
     $shortcut = $wShell.CreateShortcut($shortcutPath)
 
     # Set the shortcut properties
-    $shortcut.TargetPath = $targetPath
+    $shortcut.TargetPath = "powershell.exe -file $targetPath"
     $shortcut.WorkingDirectory = "$startInFolder\"
     $shortcut.Description = "Shortcut to my PowerShell script"
 
