@@ -87,11 +87,22 @@ if ($3dsMaxLocation) {
     # Create a new WScript.Shell COM object
     $wShell = New-Object -ComObject WScript.Shell
 
+    if (Test-Path -Path $shortcutPath) {
+        Write-Output "Shortcut already exists on the desktop: $shortcutPath"
+        Write-Output "Deleting the existing shortcut.."
+        Remove-Item -Path $shortcutPath
+    }
+
     # Create the shortcut object
     $shortcut = $wShell.CreateShortcut($shortcutPath)
 
     # Set the shortcut properties
-    $shortcut.TargetPath = "powershell.exe -file $targetPath"
+    $PowerShellPath = (Get-Command powershell).Source
+    #for win11.. change to this
+    Write-Output "Shortcut target path: $targetPath"
+    
+    $shortcut.TargetPath = $PowerShellPath    # Path to PowerShell executable
+    $shortcut.Arguments = "-ExecutionPolicy Bypass -File `"$targetPath`""  # Script with arguments
     $shortcut.WorkingDirectory = "$startInFolder\"
     $shortcut.Description = "Shortcut to my PowerShell script"
 
