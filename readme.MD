@@ -37,6 +37,15 @@ this makes it so you can install things (like pip packages) in the terminal efte
 .\setupMaxPython\startMaxLocal.ps1
 ```
 
+## when setup / install is done
+you start max by either 
+1. starting a terminal, go to the correct folder for the project and run
+```
+.\setupMaxPython\startMaxLocal.ps1
+```
+2. or you double-click the icon on your desktop to start 3dsmax with that virtual environment active
+
+
 ---------
 Here are my small powershell scripts to setup:
 * inital install of pip and virtualenv on a freshly installed max.. (**run once** on newly installed max)
@@ -100,6 +109,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
