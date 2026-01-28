@@ -24,8 +24,8 @@ git clone https://github.com/ogmasoul3d/setupMaxPython
 
 5. now it is time to run the setupVenvInCurrentFolder command.. 
   - This makes a virtual environment using the python installed in 3dsmax.
-  - it also creates a shortcut and places that on your desktop with the name of the folder you run it from, in this case"awsome_3dsmax_python_script"
-  - it also creates a small splash screen bitmap that contains the name of the project.. so you see that when you double-click / run the short cut. (when you start to have more than one.. it can be good to know what project it is running)
+  - it also creates a shortcut and places that on your desktop with the name of the folder you run it from, in this example "awsome_3dsmax_python_script"
+  - it also creates a small splash screen bitmap, that contains the name of the project.. so you see that when you double-click / run the short-cut. (when you start to have more than one.. it can be good to know what project it is running)
 
 ```
 .\setupMaxPython\setupVenvInCurrentFolder.ps1
@@ -100,6 +100,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
