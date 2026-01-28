@@ -1,5 +1,18 @@
 # **Some small scripts to simplify the setup and usage of python in 3dsmax development**
 
+## background / why
+When doing python scripting at work I got tired of the process of installing packages that I could access in 3dsmax. 
+Plus I had gotten used to the concept of virtual environments and do not like to install all packages in one place. 
+I like to have the packages needed for some one project contained, for version handling and less cluttered namespace.
+As well as just to keep your own sanity.
+
+When I learnt that I could point to the max python instance from somewhere else then I was happy but it was a bit of a cumbersome process to 
+type this every time I started a new project. And there where a few more steps than normal when I just do a python project outside 3dsmax.
+So being a programmer I decided to make a helper script for this to speed up this. And now I share this since I think there might be other 
+python - scripters for 3dsmax out there that would like to do this as well.
+
+Happy coding!
+
  **Note.** *This does not use gitbash/bash SH scripting. Instead I use Powershell, since this is available windows machines in the renderfarm.*
 
 ## installation and usage of this..
@@ -109,6 +122,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
