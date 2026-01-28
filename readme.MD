@@ -11,9 +11,9 @@ Here are my small powershell scripts to setup:
 ## **[!] Before running any scripts, *UPDATE maxversion.txt* to the version you are targeting. All scripts will read this file to get the version num** 
 
 Just type the version id directly in the txt file.. nothing else.. ex:
-´´´
-2022
-´´´
+```
+2026
+```
 
 
 ##  **InstallPipAndVirtualenv.ps1**
@@ -64,3 +64,4 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
