@@ -1,15 +1,13 @@
 # **Some small scripts to simplify the setup and usage of python in 3dsmax development**
 
 ## background / why
-When doing python scripting at work I got tired of the process of installing packages that I could access in 3dsmax. 
-Plus I had gotten used to the concept of virtual environments and do not like to install all packages in one place. 
-I like to have the packages needed for some one project contained, for version handling and less cluttered namespace.
-As well as just to keep your own sanity.
+When working with Python scripting at work, I grew tired of the process of installing packages in a way that made them accessible to 3ds Max. I had also become used to working with virtual environments and didn’t like installing all packages in a single global location.
 
-When I learnt that I could point to the max python instance from somewhere else then I was happy but it was a bit of a cumbersome process to 
-type this every time I started a new project. And there where a few more steps than normal when I just do a python project outside 3dsmax.
-So being a programmer I decided to make a helper script for this to speed up this. And now I share this since I think there might be other 
-python - scripters for 3dsmax out there that would like to do this as well.
+I prefer keeping only the packages required for a specific project isolated—both for easier version management and to avoid a cluttered namespace. And, honestly, for my own sanity.
+
+When I learned that it was possible to point to the 3ds Max Python instance from an external location, I was happy—but the setup was a bit cumbersome. Having to repeat the same steps every time I started a new project felt unnecessary, and the workflow involved more steps than a typical Python project outside of 3ds Max.
+
+So, being a programmer, I decided to create a small helper script to streamline this process. I’m now sharing it in case there are other Python scripters working with 3ds Max who would find it useful as well.
 
 Happy coding!
 
@@ -122,6 +120,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
