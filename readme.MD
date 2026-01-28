@@ -14,18 +14,18 @@ cd awsome_3dsmax_python_script
 git clone https://github.com/ogmasoul3d/setupMaxPython
 ```
 
-2.1 make sure to update the **maxversion.txt** to the version of 3dsmax you want to use. You open the file and edit to the version you use. If you are using max 2025 then change to ```2025```
+3. make sure to update the **maxversion.txt** to the version of 3dsmax you want to use. You open the file and edit to the version you use. If you are using max 2025 then change to ```2025```
 
 
-3. now run this command in the powershell terminal, this will setup your max and things in your environment
+4. now run this command in the powershell terminal, this will setup your max and things in your environment
 ```
 .\setupMaxPython\InstallPipAndVirtualenv.ps1
 ```
 
-4. now it is time to run the setupVenvInCurrentFolder command.. 
-4.1 This does that makes a virtual environment where the python it is using is the one that is installed in 3dsmax.
-4.2 it also creates a shortcut and places that on your desktop with the name of the folder you run it from, in this case"awsome_3dsmax_python_script"
-4.3 it also creates a small splash screen bitmap that contains the name of the project.. so you see that when you double-click / run the short cut. (when you start to have more than one.. it can be good to know what project it is running)
+5. now it is time to run the setupVenvInCurrentFolder command.. 
+5.1. This does that makes a virtual environment where the python it is using is the one that is installed in 3dsmax.
+5.2. it also creates a shortcut and places that on your desktop with the name of the folder you run it from, in this case"awsome_3dsmax_python_script"
+5.3. it also creates a small splash screen bitmap that contains the name of the project.. so you see that when you double-click / run the short cut. (when you start to have more than one.. it can be good to know what project it is running)
 
 ```
 .\setupMaxPython\setupVenvInCurrentFolder.ps1
@@ -100,6 +100,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
