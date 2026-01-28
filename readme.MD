@@ -1,6 +1,6 @@
 # **Some small scripts to simplify the setup and usage of python in 3dsmax development**
 
- **Note.** *This does not use gitbash/bash SH scripting. Instead I use Powershell, since this is more available on the renderfarm.*
+ **Note.** *This does not use gitbash/bash SH scripting. Instead I use Powershell, since this is available windows machines in the renderfarm.*
 
 ## installation and usage of this..
 1. create a new folder for the python project that you want to work with inside 3dsmax. This folder can be where you want it to be.
@@ -109,6 +109,7 @@ This script should:
 4. this makes everything you install in this virtual-environment accessable to 3dsmax, to import, as well
 
 ### **[my page with other learnings and findings in this Python & Max endevour](/MaxPythonTipsnTricks)**
+
 
 
 
